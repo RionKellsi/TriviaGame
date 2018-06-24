@@ -3,16 +3,41 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-   
+    <title>Game Of Thrones Trivia</title>
     <link href="assets/css/reset.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer+SC|Raleway" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="assets/css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
+    <header>
+        <img src='assets/images/GOTheader.jpg' alt='headerImg'>
+        <h2>Game of Thrones Trivia</h2>
+    </header>
 
+    <div class="container">
+        <button class='btn btn-primary' id='startBtn'>Start</button>
+        <!--Question Page-->
+        <div id="timeleft"></div>
+        <div id="currentQuestion"></div>
+        <div class="question"></div>
+        <div class="answerList"></div>
+        <!--Answer Page-->
+        <div id="message"></div>
+        <div id="correctAnswer"></div>
+        <div id="gif"></div>
+        <!--Score-->
+        <div id="endMessage"></div>
+        <div id="correctAnswers"></div>
+        <div id="incorrectAnswers"></div>
+        <div id="unasnwered"></div>
+        <div id="startOverBtn"></div>
+    </div>
 
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 
 </body>
 </html>
