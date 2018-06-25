@@ -239,10 +239,10 @@ function answersPage(){
     }
     // create game timers
     if(currentQuestion == (gameQuestions.length-1)){
-        setTimeout(score, 1000)
+        setTimeout(score, 3000)
     } else {
         currentQuestion++;
-        setTimeout(newQuestion, 1000);
+        setTimeout(newQuestion, 5000);
     }
 }
 

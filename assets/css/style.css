@@ -1,12 +1,14 @@
 body {
-    font-family: 'Uncial Antiqua', cursive;
+    font-family: 'Eagle Lake', cursive;
     font-size:25px;
-}
-h2 { 
-    font-family: 'IM Fell Great Primer SC', serif;
+    margin-bottom: 150px;
 }
 
-.btn-primary,.reset{
+h2 { 
+    font-family: 'IM Fell English SC', serif;
+}
+
+.btn-primary,.reset {
     background-color: black;
     color: silver;
     font-family: 'Uncial Antiqua', cursive;
@@ -15,12 +17,12 @@ h2 {
     margin-bottom: 100px;
 }
 
-.btn-primary:hover, .reset:hover{
+.btn-primary:hover, .reset:hover {
     background-color: whitesmoke;
 }
 
-.container{
-    margin-top: 50px;
+.container {
+    margin-top: 20px;
     width: 700px;
 }
 
@@ -33,4 +35,7 @@ h2 {
     background-color: silver;
     color: black;
     padding: 20px;
+    margin-left: 300px;
+    margin-right: 300px;
+
 }
