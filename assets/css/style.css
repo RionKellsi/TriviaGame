@@ -1,6 +1,36 @@
-.questions {
-    font-family: 'Raleway', sans-serif;
+body {
+    font-family: 'Uncial Antiqua', cursive;
+    font-size:25px;
 }
 h2 { 
     font-family: 'IM Fell Great Primer SC', serif;
+}
+
+.btn-primary,.reset{
+    background-color: black;
+    color: silver;
+    font-family: 'Uncial Antiqua', cursive;
+    font-size: 40px;
+    padding: 10px;
+    margin-bottom: 100px;
+}
+
+.btn-primary:hover, .reset:hover{
+    background-color: whitesmoke;
+}
+
+.container{
+    margin-top: 50px;
+    width: 700px;
+}
+
+#startOverBtn {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.userChoice:hover {
+    background-color: silver;
+    color: black;
+    padding: 20px;
 }
