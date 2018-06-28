@@ -283,4 +283,9 @@ function score() {
     $("#startOverBtn").addClass("reset");
     $("#startOverBtn").show();
     $("#startOverBtn").html("Try your luck again?");
+
+    $("#startOverBtn").on("click", function(){
+        $("#endGame").hide();
+    })
+
 };
