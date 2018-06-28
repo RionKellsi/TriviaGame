@@ -2,7 +2,8 @@
 var gameQuestions = [{
     question: "Ser Jaime Lannister is often referred to as....",
     answerList: ["Prince", "KingSlayer", "KnightSlayer", "Lord Lannister"],
-    answer: 1
+    answer: 1,
+    gif: "assets/images/question1.gif"
 }, {
     question: "What is the name of the sword gifted to Arya Stark by her half brother, Jon Snow?",
     answerList: ["Ice", "Oathkeeper", "Needle", "Widowswail"],
@@ -210,7 +211,8 @@ function answersPage() {
     var correctAnswerText = gameQuestions[currentQuestion].answerList[gameQuestions[currentQuestion].answer];
     //create a variable to display answer
     var correctAnswerIndex = gameQuestions[currentQuestion].answer;
-    $('#gif').html('<img src = "assets/images/' + gifs[currentQuestion] + '.gif');
+    var answerGifs = gameQuestions[currentQuestion].gif;
+    // $('#gif').html('<img src = "assets/images/' + gifs[currentQuestion] + '.gif');
 
     //correct - incorrect - unanswered 
     //use if,else if, else statement 
@@ -218,6 +220,7 @@ function answersPage() {
     if ((userSelect == correctAnswerIndex) && (answered == true)) {
         correctAnswer++;
         $("#message").html(messages.correct);
+        // $("#gif").html(answerGifs);
     } else if ((userSelect != correctAnswerIndex) && (answered == true)) {
         wrongAnswer++;
         $("#message").html(messages.wrong);
