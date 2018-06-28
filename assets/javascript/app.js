@@ -7,84 +7,103 @@ var gameQuestions = [{
 }, {
     question: "What is the name of the sword gifted to Arya Stark by her half brother, Jon Snow?",
     answerList: ["Ice", "Oathkeeper", "Needle", "Widowswail"],
-    answer: 2
+    answer: 2,
+    gif: "assets/images/question2.gif"
 }, {
     question: "Where is the seat of House Stark?",
     answerList: ["Highgarden", "Casterly Rock", "Kings Landing", "Winterfell"],
-    answer: 3
+    answer: 3,
+    gif: "assets/images/question3.gif"
 }, {
     question: "How Did Viserys Targaryen die?",
     answerList: ["Stabbed in the heart", "Beheading", "With a melted golden crown", "Burned alive"],
-    answer: 2
+    answer: 2,
+    gif: "assets/images/question4.gif"
 }, {
     question: "Who hosted the Red Wedding?",
     answerList: ["Cersei Lannister", "Walder Frey", "Rhaegar Targaryen", "Eddard Stark"],
-    answer: 1
+    answer: 1,
+    gif: "assets/images/question5.gif"
 },{
     question: "How does King Joffery Die?",
     answerList: ["In battle", "Shot with a crossbow", "Poisoned at his wedding feast", "Strangled in his sleep"],
-    answer: 2
+    answer: 2,
+    gif: "assets/images/question6.gif"
 }, {
     question: "What is the battle between Jon Snow and Ramsay Bolton known as?",
     answerList: ["Battle of Winterfell", "Battle of The Bastards", "Battle of The Throne", "Battle of The Land"],
-    answer: 1
+    answer: 1,
+    gif: "assets/images/question7.gif"
 }, {
     question: "Who was the first character to kill a Whitewalker in thousands of years?",
     answerList: ["Jon Snow", "Jaime Lannister", "Brandon Stark", "Samwell Tarly"],
-    answer: 3
+    answer: 3,
+    gif: "assets/images/question8.gif"
 }, {
     question: "What is the name of the ancestral seat of House Targaryen?",
     answerList: ["Dragonstone", "Dragoncastle", "Dragonpalace,", "Dragonmouth"],
-    answer: 0
+    answer: 0,
+    gif: "assets/images/question9.gif"
 }, {
     question: "What is the leader of the White Walkers known as?",
     answerList: ["The Ice King", "The Night King", "The White King", "King of the White Walkers"],
-    answer: 1
+    answer: 1,
+    gif: "assets/images/question10.gif"
 }, {
     question: "What are the names of Daenerys Targaryen's three dragons?",
     answerList: ["Dragon,Little Finger,Tyrell", "Drogon,Rhaegal,Viserion", "Khal,Grey Worm,Snow", "Drogo,Rhaegar,Viserys"],
-    answer: 1
+    answer: 1,
+    gif: "assets/images/question11.gif"
 }, {
     question: "What are the only ways to kill a White Walker?",
     answerList: ["Dragonglass & Valyrian Steel", "Dragonglass & Dismemberment", "Fire & Dismememberment", "Dragonglass & Fire"],
-    answer: 0
+    answer: 0,
+    gif: "assets/images/question12.gif"
 }, {
     question: "What is the name of Jon Snow's direwolf?",
     answerList: ["Grey Wind", "Summer", "Shaggydog", "Ghost"],
-    answer: 3
+    answer: 3,
+    gif: "assets/images/question13.gif"
 }, {
     question: "What is Arya's punishment for stealing from the Many-Face God?",
     answerList: ["Death", "Blindness", "Memory Loss", "Starvation"],
-    answer: 1
+    answer: 1,
+    gif: "assets/images/question14.gif"
 }, {
     question: "The Night King was created using a dagger made of:",
     answerList: ["Valyrian Steel", "Blue Ice", "Steel", "Dragonglass"],
-    answer: 3
+    answer: 3,
+    gif: "assets/images/question15.gif"
 }, {
     question: "Dead creatures revived by White Walkers are known as:",
     answerList: ["Walkers", "Zombies", "Wights", "White Walkers"],
-    answer: 2
+    answer: 2,
+    gif: "assets/images/question16.gif"
 }, {
     question: "When expecting her child, Daenerys Targaryen must do what as apart of a special Dothraki ceremony?",
     answerList: ["Eat dragon eggs", "Eat the raw heart of a stallion", "Drink the blood of her husband", "Sacrifice her horse"],
-    answer: 1
+    answer: 1,
+    gif: "assets/images/question17.gif"
 }, {
     question: "Who is the father of Cersei Lannister's children?",
     answerList: ["Robert Baratheon", "Eddard Stark", "Jaime Lannister", "Petyr Baelish"],
-    answer: 2
+    answer: 2,
+    gif: "assets/images/question18.gif"
 }, {
     question: "What distinct feature does Brienne of Tarth recall about the entity that killed Renly Baratheon?",
     answerList: ["It had Stannis Baratheon's face", "It had Melisandre's face", "He was killed with Valyrian Steel", "The name of the poison"],
-    answer: 0
+    answer: 0,
+    gif: "assets/images/question19.gif"
 }, {
     question: "Who is Jon Snow's mother?",
     answerList: ["Catelyn Stark", "A prostitute", "Lyanna Stark", "Cersei Lannister"],
-    answer: 2
+    answer: 2,
+    gif: "assets/images/question20.gif"
 }, {
     question: "Which Stark sibling has a hit list?",
     answerList: ["Sansa Stark", "Arya Stark", "Rob Stark", "Brandon Stark"],
-    answer: 1
-
+    answer: 1,
+    gif: "assets/images/question21.gif"
 }];
 
 // console.log(gameQuestions);
@@ -92,6 +111,7 @@ var gameQuestions = [{
 // create a function to hide the gis div
 $(function () {
     $("#gif").hide();
+    $("#endGame").hide();
 });
 
 // Create buttons for Game
@@ -199,7 +219,7 @@ function showCountdown() {
     }
 }
 
-var gifs = ["question1", "question2", "question3", "question4", "question5", "question6", "question7", "question8", "question9", "question10", "question11", "question12", "question13", "question14", "question15", "question16", "question18", "question19", "question20", "question21"];
+
 
 function answersPage() {
     $("#currentQuestion").empty();
@@ -211,7 +231,11 @@ function answersPage() {
     var correctAnswerText = gameQuestions[currentQuestion].answerList[gameQuestions[currentQuestion].answer];
     //create a variable to display answer
     var correctAnswerIndex = gameQuestions[currentQuestion].answer;
-    var answerGifs = gameQuestions[currentQuestion].gif;
+
+    var gameGifs = gameQuestions[currentQuestion].gif;
+
+    //here i tried to add the corrisponding GIF to the answer
+    // var answerGifs = gameQuestions[currentQuestion].gif;
     // $('#gif').html('<img src = "assets/images/' + gifs[currentQuestion] + '.gif');
 
     //correct - incorrect - unanswered 
@@ -220,15 +244,18 @@ function answersPage() {
     if ((userSelect == correctAnswerIndex) && (answered == true)) {
         correctAnswer++;
         $("#message").html(messages.correct);
+        $("#gif").html("<img src=" + gameGifs + "</img>");
         // $("#gif").html(answerGifs);
     } else if ((userSelect != correctAnswerIndex) && (answered == true)) {
         wrongAnswer++;
         $("#message").html(messages.wrong);
         $("#correctedAnswer").html("The correct answer is: " + correctAnswerText);
+        $("#gif").html("<img src=" + gameGifs + "</img>");
     } else {
         unanswered++;
         $("#message").html(messages.timeEnd);
         $("#correctedAnswer").html("The correct answer is: " + correctAnswerText);
+        $("#gif").html("<img src=" + gameGifs + "</img>");
         answered = true;
     }
     // timer run through the game without user input
@@ -244,7 +271,7 @@ function score() {
     $("#timeLeft").empty();
     $("#message").empty();
     $("#correctedAnswer").empty();
-    // $("#gif").empty();
+    $("#endGame").show();
 
 
     $("#endMessage").html(messages.endGame);
