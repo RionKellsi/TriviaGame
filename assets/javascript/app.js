@@ -258,6 +258,10 @@ function answersPage() {
         $("#gif").html("<img src=" + gameGifs + "</img>");
         answered = true;
     }
+
+    //I was unable to get my gif's to show for their corrisponding answer - I plan to revist 
+
+    
     // timer run through the game without user input
     if (currentQuestion == (gameQuestions.length - 1)) {
         setTimeout(score, 3000)
